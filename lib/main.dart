@@ -25,7 +25,12 @@ class FirstPage extends StatelessWidget {
       ),
       body:ElevatedButton(
         child:Text('다음 페이지로'),
-        onPressed: (){},
+        onPressed: (){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => SecondPage()),
+          );
+        },
       )
     );
   }
