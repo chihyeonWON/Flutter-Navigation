@@ -30,3 +30,9 @@ MaterialPageRouter( builder: (context) => SecondPage()) 함수의 매개변수�
 ```
 ![image](https://user-images.githubusercontent.com/58906858/210202087-3b8927af-43a5-466e-b44f-12e5e53f2de4.png)
   
+#### pop으로 이전 화면으로 이동
+```
+Navigator.push() 메서드로 새로운 화면이 표시되어도 이전 화면은 메모리에 남게 됩니다.
+이때 Navigator.pop() 메서드로 현재 화면을 종료하고 이전 화면으로 돌아갈 수 있습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/210202412-cc893449-6e15-4d57-a517-4c1283fea5ab.png) 
