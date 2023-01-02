@@ -46,7 +46,9 @@ class SecondPage extends StatelessWidget {
       ),
       body:ElevatedButton(
         child:Text('이전 페이지로'),
-        onPressed:(){},
+        onPressed:(){
+          Navigator.pop(context); // 현재 화면을 종료하고 이전 화면으로 돌아가기
+        },
       ),
     );
   }
