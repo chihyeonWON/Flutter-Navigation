@@ -15,6 +15,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class Person {
+  String name; // 이름
+  int age; // 나이
+
+  Person(this.name, this.age);
+}
+
 // 첫 페이지
 class FirstPage extends StatelessWidget {
   @override
@@ -26,6 +33,7 @@ class FirstPage extends StatelessWidget {
       body:ElevatedButton(
         child:Text('다음 페이지로'),
         onPressed: (){
+          final person = Person('홍길동', 20);
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => SecondPage()),
@@ -38,6 +46,10 @@ class FirstPage extends StatelessWidget {
 
 // 두 번째 페이지
 class SecondPage extends StatelessWidget {
+  final Person person;
+
+  SecondPage({@required this.person});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
