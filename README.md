@@ -45,3 +45,12 @@ FirstPage 클래스의 버튼 클릭 이벤트 부분을 수정합니다.
 SecondPage 클래스에서 Person 객체를 받도록 수정합니다. SecondPage({@required this.person});
 ```
 ![image](https://user-images.githubusercontent.com/58906858/210292296-8017ba18-3276-4004-8ed1-4a6ebf8586f9.png)
+
+#### 이전 화면으로 데이터 돌려주기
+```
+FirstPage 클래스의 push 메서드는 Future 반환 타입을 가집니다.
+Future 반환 타입을 가지려면 await 키워드를 메서드 앞에 추가하고
+await 키워드를 사용하는 메서드의 인수와 함수 본문 사이에 async를 추가합니다.
+두 번째 화면의 버튼을 탭하면 첫 번째 화면에서 'ok'를 출력하는 것을 확인할 수 있습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/210293860-2e1d394f-df22-436b-b262-fcb3b6f3dbca.png)
