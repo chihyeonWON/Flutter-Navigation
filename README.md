@@ -54,3 +54,28 @@ await 키워드를 사용하는 메서드의 인수와 함수 본문 사이에 a
 두 번째 화면의 버튼을 탭하면 첫 번째 화면에서 'ok'를 출력하는 것을 확인할 수 있습니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/210293860-2e1d394f-df22-436b-b262-fcb3b6f3dbca.png)
+
+### routes를 활용한 내비게이션
+```
+페이지를 이동할때마다 직접 이동할 페이지의 클래스명을 작성하는 것은
+매우 긴 코드를 페이지를 이동할 때마다 작성해야 해서 불편합니다.
+routes를 활용한 내비게이션을 사용하면 더 간결하고 체계적인 방법으로 내비게이션을 구성할 수 있습니다.
+```
+
+#### routes 정의
+```
+routes는 MaterialApp 클래스의 routes 프로퍼티에 정의할 수 있습니다
+routes: {
+  '/first':(context) => FirstPage(),
+  '/second':(context) => SecondPage(),
+},
+
+routes 프로퍼티에 Map 형태(키-값 쌍) 문자열과 목적지 인스턴스를 작성하면 됩니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/210294350-ec61e68a-416c-4321-bdb4-2f6f9467f820.png)
+```
+FirstPage 클래스의 push메서드 대신 pushName 메서드를 사용하였고 
+첫 번째 인수로 context 두 번째 인수로 routes 프로퍼티에 정의된 '/second'를 넣어주었습니다.
+정상적으로 routes를 활용해서 화면이 전환되는 것을 확인할 수 있었습니다.
+```
+
