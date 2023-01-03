@@ -10,7 +10,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FirstPage(),   // 첫 페이지를 시작 페이지로 지정
+      home: FirstPage(), // 첫 페이지를 시작 페이지로 지정
+      routes:{
+        '/first':(context)=>FirstPage(),
+        '/second':(context)=>SecondPage(),
+      },
     );
   }
 }
@@ -27,9 +31,9 @@ class FirstPage extends StatelessWidget {
       body: ElevatedButton(
         child: Text('다음 페이지로'),
         onPressed: () async {
-          final result = await Navigator.push(
+          final result = await Navigator.pushNamed(
             context,
-            MaterialPageRoute(builder: (context) => SecondPage()),
+            '/second'
           );
 
           print(result);
